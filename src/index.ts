@@ -1,9 +1,11 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
+import bodyParser from 'body-parser'
 dotenv.config()
 
 const port = process.env.PORT || 8080
 const app = express()
+app.use(bodyParser.json())
 
 app.post('/', (req, res) => {
   console.log('req :>> ', req)
