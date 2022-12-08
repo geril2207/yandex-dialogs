@@ -2,7 +2,7 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-const port = process.env.port || 5000
+const port = process.env.port || 8080
 const app = express()
 
 app.post('/', (req, res) => {
