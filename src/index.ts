@@ -16,6 +16,7 @@ app.post('/', (req, res) => {
     session,
     response: {
       text: request?.command ?? 'Привет, я Алиса, а ты?',
+      tts: request?.command ?? 'Привет, я Алиса, а ты?',
       end_session: false,
     },
   })
