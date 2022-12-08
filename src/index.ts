@@ -16,7 +16,7 @@ app.post('/', (req, res) => {
   if (version) responseData.version = version
   if (version) responseData.session = session
 
-  res.json(responseData)
+  res.json({ response: responseData })
 })
 
 app.listen(port, () => {
