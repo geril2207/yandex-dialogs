@@ -8,14 +8,14 @@ const app = express()
 app.use(bodyParser.json())
 
 app.post('/', (req, res) => {
-  console.log('req :>> ', req)
-  const { version, session } = req.body
+  const { version, session, request } = req.body
 
+  console.log('request :>> ', request.command)
   res.json({
     version,
     session,
     response: {
-      text: 'Привет, Я Алиса, а ты?',
+      text: request?.command ?? 'Привет, я Алиса, а ты?',
       end_session: false,
     },
   })
